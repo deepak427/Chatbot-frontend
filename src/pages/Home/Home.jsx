@@ -1,11 +1,12 @@
 import React from "react";
-import nainitalImage from "../../assets/nainital.jpg";
+import governorPrimeminister from "../../assets/governor-primeminister.jpg";
+import Cards from "../../components/Cards/Cards";
 import "./Home.css";
 
 const Home = () => {
   return (
     <div className="home-main">
-      <img src={nainitalImage} alt="nainital" className="homepage-image" />
+      <img src={governorPrimeminister} alt="governor-primeminister" className="homepage-image" />
       <div className="overlay">
         <h4>Raj Bhavan:</h4>
         <p>
@@ -16,6 +17,7 @@ const Home = () => {
           christened as the "Government House".
         </p>
       </div>
+      <Cards />
     </div>
   );
 };

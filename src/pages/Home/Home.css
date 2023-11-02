@@ -1,12 +1,10 @@
 .home-main {
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
 }
 
 .homepage-image {
-  margin-top: calc(4rem + 2px);
+  margin-top: calc(8rem + 2px);
   width: 100%;
   height: 100%;
   object-fit: cover;
