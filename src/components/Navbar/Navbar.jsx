@@ -20,32 +20,24 @@ const Navbar = () => {
           <h4> PVSM, UYSM, AVSM, VSM (Retd) </h4>
           <h4> Governor of Uttarakhand</h4>
         </div>
-        <div
-          className="governor-logo"
-        >
+        <div className="governor-logo">
           <img src={ltGenGurmitSingh} alt="ltGenGurmitSingh" />
         </div>
       </Link>
-      <Link to="/" className="nav-item nav-btn about">
-        About
-      </Link>
-      <Link to="/speeches" className="nav-item nav-btn products">
-        Speeches
-      </Link>
-      <Link to="/chatbot" className="nav-item nav-btn forTeams">
-        ChatBot
-      </Link>
-      {user === null ? (
-        <Link to="/" className="nav-item nav-links">
-          Admin Login
+      <div className="sections">
+        <Link to="/" className="nav-item nav-btn about">
+          Home
         </Link>
-      ) : (
-        <>
-          <button className="nav-item nav-links" onClick={handleLogOut}>
-            Log out
-          </button>
-        </>
-      )}
+        <Link to="/speeches" className="nav-item nav-btn products">
+          Speeches
+        </Link>
+        <Link to="/chatbot" className="nav-item nav-btn forTeams">
+          ChatBot
+        </Link>
+        <Link to="/adminLogin" className="nav-item nav-links">
+          Admin
+        </Link>
+      </div>
     </nav>
   );
 };

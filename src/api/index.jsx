@@ -9,3 +9,7 @@ API.interceptors.request.use((req) => {
 export const askQuestion = (askData) => API.post("/llama/chatbot", askData);
 export const getVideoIds = () => API.get("/video/getAllIds");
 
+export const adminLogin = (loginData) => API.post("/auth/login", loginData);
+export const UploadVideo = (videoData) => API.post("/video/uploadVideoId", videoData);
+
+

@@ -22,7 +22,7 @@ function Speeches() {
         <div className="video-list">
           {videoIds.map((video, index) => (
             <div key={index}>
-              <VideoBox srcVideo={video.video_url} srcImage={video.thumbnail_url} title="This is sample" />
+              <VideoBox srcVideo={video[0].video_url} srcImage={video[0].thumbnail_url} title={video[1]} />
             </div>
           ))}
         </div>

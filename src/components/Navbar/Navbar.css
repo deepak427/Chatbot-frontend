@@ -22,11 +22,11 @@
 
 .main-nav .national-emblem-logo {
   padding: 1rem 1rem 1rem 1.5rem;
-  width: 4rem;
+  width: 7rem;
 }
 
 .main-nav .governor-label {
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
 }
 
 .main-nav .governor-logo img {
@@ -77,4 +77,70 @@
 
 .nav-image:hover {
   opacity: 1;
+}
+
+.three-bars {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+  .side-nav {
+    display: flex;
+  }
+  .sections {
+    display: none;
+  }
+
+  .main-nav .nav-front {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .three-bars {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .main-nav .governor-logo img {
+    width: 5rem;
+  }
+  .main-nav .national-emblem-logo {
+    width: 5rem;
+  }
+  .main-nav .governor-label {
+    font-size: small;
+  }
+  .main-nav {
+    height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-nav .governor-logo img {
+    width: 3.5rem;
+  }
+
+  .main-nav .governor-label {
+    font-size: 10px;
+  }
+  .main-nav {
+    height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 391px) {
+  .main-nav .governor-logo img {
+    width: 3.2rem;
+  }
+  .main-nav .national-emblem-logo {
+    width: 4rem;
+  }
+  .main-nav .governor-label {
+    font-size: 8px;
+  }
+  .main-nav {
+    height: 4rem;
+  }
 }
