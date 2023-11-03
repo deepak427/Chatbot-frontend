@@ -1,0 +1,24 @@
+.box-main {
+  background-color: #f8f9f9;
+  padding: 0.5rem;
+  margin: 1rem 1rem 1rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+}
+
+.box-main .reason-link {
+    text-decoration: none;
+    color: black;
+}
+
+.box-main .box-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.box-main:hover {
+    margin: 0.5rem 1rem 1rem 1rem;
+  box-shadow: rgba(64, 85, 128, 0.14) 0px 4px 12px
+}

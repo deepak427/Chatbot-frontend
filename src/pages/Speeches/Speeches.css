@@ -1,0 +1,8 @@
+.video-list {
+  display: grid;
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-gap: 1rem;
+  grid-auto-flow: row;
+  margin-top: calc(8rem - 4px);
+  cursor: pointer;
+}

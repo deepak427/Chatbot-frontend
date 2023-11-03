@@ -7,3 +7,5 @@ API.interceptors.request.use((req) => {
 });
 
 export const askQuestion = (askData) => API.post("/llama/chatbot", askData);
+export const getVideoIds = () => API.get("/video/getAllIds");
+

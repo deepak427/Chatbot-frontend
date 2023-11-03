@@ -12,7 +12,7 @@ function Cards() {
               alt="Speeches"
               src="images/speech_governor.jpg"
               text="Speeches"
-              path="/chatbot"
+              path="/speeches"
             />
             <CardItem
               alt="Chatbot"
