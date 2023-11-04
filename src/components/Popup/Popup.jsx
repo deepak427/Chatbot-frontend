@@ -10,7 +10,7 @@ const Popup = ({ onClose, src }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <video controls style={{width: "40rem"}}>
+        <video className="video_main" controls style={{width: "40rem"}}>
           <source src={src} type="video/mp4" />
           Your browser does not support the html video tag.
         </video>
