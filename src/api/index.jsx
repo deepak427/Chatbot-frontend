@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://chatbot-server-henna.vercel.app" });
+const API = axios.create({
+  baseURL: "https://chatbot-server-gamma.vercel.app",
+});
 API.interceptors.request.use((req) => {
   return req;
 });
