@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// hello demo
-
 const API = axios.create({ baseURL: "https://chatbot-server-gamma.vercel.app" });
 API.interceptors.request.use((req) => {
   return req;
