@@ -16,13 +16,20 @@ const VideoBox = (props) => {
       <Link to="#popup" className="reason-link" onClick={handleLinkClick}>
         <div className="box-image-container">
           {props.status === "completed" ? (
-            <img src={props.srcImage} alt="thumbnail" />
+            <>
+              <img src={props.srcImage} alt="thumbnail" />
+              <div className="video-details">
+                <p style={{textAlign: "center", fontWeight: "600"}} >{props.title}</p>
+              </div>
+            </>
           ) : (
-            <img src="images/spinner.gif" alt="thumbnail" />
+            <>
+              <img src="images/spinner.gif" alt="thumbnail" />
+              <div className="video-details">
+                <p style={{textAlign: "center", fontWeight: "600"}} >Processing..... <br/> It may take few minutes to hours</p>
+              </div>
+            </>
           )}
-        </div>
-        <div className="video-details">
-          <p>{props.title}</p>
         </div>
       </Link>
       {showPopup && <Popup onClose={handleLinkClick} src={props.srcVideo} />}

@@ -31,7 +31,7 @@ const UploadVideo = () => {
     });
     setTitle("")
     setSpeech("")
-    alert("Video will be updated on speech section after 5 minutes");
+    alert("Video will be updated on speech section from few minutes to hours.");
   };
 
   const handleEnter = (e) => {

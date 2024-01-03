@@ -18,6 +18,10 @@
   padding: 93px 0px 20px 0px;
 }
 
+.ask-ques-container form {
+  margin: 0 1rem 0 1rem;
+}
+
 .ask-ques-container form .ask-form-container {
   background-color: white;
   padding: 20px;

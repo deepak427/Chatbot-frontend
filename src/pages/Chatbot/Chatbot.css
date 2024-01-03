@@ -6,7 +6,7 @@
 }
 
 .chat-messages {
-  padding: 0.5rem;
+  padding: 1rem;
   margin-bottom: auto;
   align-items: center;
   flex-direction: column;
@@ -18,23 +18,25 @@
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
-  width: 80%;
+  width: 48.5%;
 }
 
 .message.user {
-  background-color: #aba6bf;
+  margin-left: auto;
+  background-color: #B2BEB5;
 }
 
 .message.user svg {
-  fill: #595775;
+  fill: cornflowerblue;
 }
 
 .message.ai {
-  background-color: #595775;
+  margin-right: auto;
+  background-color: #57aaa0;
 }
 
 .message.ai svg {
-  fill: #aba6bf;
+  fill: darkgreen;
 }
 
 .chat-input {

@@ -22,12 +22,19 @@ function Speeches() {
         <div className="video-list">
           {videoIds.map((video, index) => (
             <div key={index}>
-              <VideoBox status={video[0].status} srcVideo={video[0].video_url} srcImage={video[0].thumbnail_url} title={video[1]} />
+              <VideoBox
+                status={video[0].status}
+                srcVideo={video[0].video_url}
+                srcImage={video[0].thumbnail_url}
+                title={video[1]}
+              />
             </div>
           ))}
         </div>
       ) : (
-        <h3 style={{marginTop: "calc(8rem - 4px)", padding: "2rem"}}>Loading....</h3>
+        <h3 style={{ marginTop: "calc(8rem - 4px)", padding: "2rem" }}>
+          Loading....
+        </h3>
       )}
     </>
   );
