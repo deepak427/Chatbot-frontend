@@ -17,23 +17,23 @@ const VideoBox = (props) => {
 
   return (
     <div className="box-main">
-      <Link to="#popup" className="reason-link" onClick={handleLinkClick}>
+      <Link to="#popup" className="reason-link" >
         <div className="box-image-container">
           {props.status === "completed" ? (
             <>
-              <img src={props.srcImage} alt="thumbnail" />
+              <img onClick={handleLinkClick} src={props.srcImage} alt="thumbnail" />
               <div className="video-details">
                 <div className="bottom-box" style={{display: "flex", alignItems: "center"}}>
                   <p style={{ textAlign: "center", fontWeight: "600" }}>
                     {props.title}
                   </p>
                   <svg
-                    style={{margin: "0 0.5rem 0 auto", fill: "black"}}
-                    onClick={ () => {
-                      api.deleteVideo({
+                    style={{margin: "0 0.5rem 0 auto", fill: "black", cursor: "pointer"}}
+                    onClick={ async () => {
+                      await api.deleteVideo({
                         videoId: props.videoId,
                       });
-                      navigate("/speeches")
+                      props.fetchData()
                       }}
                     xmlns="http://www.w3.org/2000/svg"
                     height="16"

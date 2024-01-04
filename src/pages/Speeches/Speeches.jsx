@@ -7,12 +7,12 @@ import { useState } from "react";
 
 function Speeches() {
   const [videoIds, setVideoIds] = useState(null);
+  const fetchData = async () =>{
+    const videoIds = await api.getVideoIds();
+    setVideoIds(videoIds.data);
+  }
 
   useEffect(() => {
-    async function fetchData() {
-      const videoIds = await api.getVideoIds();
-      setVideoIds(videoIds.data);
-    }
     fetchData();
   }, []);
 
@@ -21,13 +21,14 @@ function Speeches() {
       {videoIds ? (
         <div className="video-list">
           {videoIds.map((video, index) => (
-            <div key={index}>
+            <div style={{cursor: "auto"}} key={index}>
               <VideoBox
                 status={video[0].status}
                 srcVideo={video[0].video_url}
                 srcImage={video[0].thumbnail_url}
                 title={video[1]}
                 videoId={video[2]}
+                fetchData={fetchData}
               />
             </div>
           ))}
