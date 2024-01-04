@@ -31,7 +31,7 @@ const UploadVideo = () => {
     });
     setTitle("")
     setSpeech("")
-    alert("Video will be updated on speech section from few minutes to hours.");
+    alert("The Video will be updated on speech section in about 10 to 15 minutes.");
   };
 
   const handleEnter = (e) => {
@@ -62,7 +62,7 @@ const UploadVideo = () => {
             </label>
             <label htmlFor="ask-ques-body">
               <h4>Speech</h4>
-              <p>Enter speech here. Speech should be small</p>
+              <p>Enter speech here.</p>
               <textarea
                 id="ask-ques-body"
                 onChange={(e) => {

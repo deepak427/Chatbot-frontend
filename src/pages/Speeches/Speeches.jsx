@@ -27,6 +27,7 @@ function Speeches() {
                 srcVideo={video[0].video_url}
                 srcImage={video[0].thumbnail_url}
                 title={video[1]}
+                videoId={video[2]}
               />
             </div>
           ))}

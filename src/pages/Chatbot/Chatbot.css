@@ -18,21 +18,21 @@
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
-  width: 48.5%;
+  width: 75.5%;
 }
 
 .message.user {
   margin-left: auto;
-  background-color: #B2BEB5;
+  background-color: #e7e7e7;
 }
 
 .message.user svg {
-  fill: cornflowerblue;
+  fill: #2b64ca;
 }
 
 .message.ai {
   margin-right: auto;
-  background-color: #57aaa0;
+  background-color: #cfcfcf;
 }
 
 .message.ai svg {
@@ -75,7 +75,7 @@
 
 .message svg {
   padding: 0.5rem;
-  width: 3rem;
+  /* width: 3rem; */
   margin-right: 1rem;
   max-width: 3rem;
   min-width: 2rem;

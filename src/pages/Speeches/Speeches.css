@@ -1,21 +1,8 @@
 .video-list {
   display: grid;
-  grid-template-columns: 25rem 25rem 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
   grid-auto-flow: row;
   margin-top: calc(8rem - 4px);
   cursor: pointer;
-}
-
-@media only screen and (max-width: 800px) {
-  .video-list {
-    grid-template-columns: 15rem 15rem 15rem;
-  }
-}
-
-@media only screen and (max-width: 615px) {
-  .video-list {
-    display: flex;
-    flex-direction: column;
-  }
 }
