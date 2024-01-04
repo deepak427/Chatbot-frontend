@@ -21,7 +21,7 @@ const Home = () => {
         }}
         style={{
           top: "80vh",
-          right: "3rem",
+          right: "2rem",
           position: "fixed",
           zIndex: "4",
           height: "8rem",

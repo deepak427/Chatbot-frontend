@@ -75,10 +75,9 @@
 
 .message svg {
   padding: 0.5rem;
-  /* width: 3rem; */
   margin-right: 1rem;
   max-width: 3rem;
-  min-width: 2rem;
+  min-width: 3rem;
   margin-bottom: auto;
 }
 
@@ -94,7 +93,8 @@
     font-size: small;
   }
   .message svg{
-    width: 2rem;
+    max-width: 3rem;
+    min-width: 3rem;
     margin-right: 0.5rem;
   }
 }

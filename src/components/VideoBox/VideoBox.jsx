@@ -23,7 +23,7 @@ const VideoBox = (props) => {
             <>
               <img style={{cursor:"pointer"}} onClick={handleLinkClick} src={props.srcImage} alt="thumbnail" />
               <div className="video-details">
-                <div className="bottom-box" style={{display: "flex", alignItems: "center"}}>
+                <div className="bottom-box" style={{padding: "0.5rem", display: "flex", alignItems: "center"}}>
                   <p style={{ textAlign: "center", fontWeight: "600" }}>
                     {props.title}
                   </p>
@@ -48,7 +48,7 @@ const VideoBox = (props) => {
           ) : (
             <>
               <img src="images/spinner.gif" alt="thumbnail" />
-              <div className="video-details">
+              <div style={{padding: "0.5rem"}} className="video-details">
                 <p style={{ textAlign: "center", fontWeight: "600" }}>
                   Processing..... <br /> It may take 10 to 15 minutes
                 </p>
