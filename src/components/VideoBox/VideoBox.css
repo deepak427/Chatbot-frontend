@@ -17,7 +17,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-  cursor: pointer;
 }
 
 .box-main .box-image-container .video-details .bottom-box svg :hover{

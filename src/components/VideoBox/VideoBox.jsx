@@ -21,7 +21,7 @@ const VideoBox = (props) => {
         <div className="box-image-container">
           {props.status === "completed" ? (
             <>
-              <img onClick={handleLinkClick} src={props.srcImage} alt="thumbnail" />
+              <img style={{cursor:"pointer"}} onClick={handleLinkClick} src={props.srcImage} alt="thumbnail" />
               <div className="video-details">
                 <div className="bottom-box" style={{display: "flex", alignItems: "center"}}>
                   <p style={{ textAlign: "center", fontWeight: "600" }}>
