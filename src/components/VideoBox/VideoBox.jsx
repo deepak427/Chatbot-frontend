@@ -2,39 +2,52 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Popup from "../../components/Popup/Popup.jsx";
-import * as api from "../../api";
-import { useNavigate } from "react-router-dom";
+import DeletePopup from "../DeletePopup/DeletePopup.jsx";
 import "./VideoBox.css";
 
 const VideoBox = (props) => {
   const [showPopup, setShowPopup] = useState(false);
-  const navigate = useNavigate();
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
 
   const handleLinkClick = () => {
     setShowPopup(!showPopup);
   };
 
+  const handleLinkClickDelete = () => {
+    setShowDeletePopup(!showDeletePopup);
+  };
 
   return (
     <div className="box-main">
-      <Link to="#popup" className="reason-link" >
+      <Link to="#popup" className="reason-link">
         <div className="box-image-container">
           {props.status === "completed" ? (
             <>
-              <img style={{cursor:"pointer"}} onClick={handleLinkClick} src={props.srcImage} alt="thumbnail" />
+              <img
+                style={{ cursor: "pointer" }}
+                onClick={handleLinkClick}
+                src={props.srcImage}
+                alt="thumbnail"
+              />
               <div className="video-details">
-                <div className="bottom-box" style={{padding: "0.5rem", display: "flex", alignItems: "center"}}>
+                <div
+                  className="bottom-box"
+                  style={{
+                    padding: "0.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
                   <p style={{ textAlign: "center", fontWeight: "600" }}>
                     {props.title}
                   </p>
                   <svg
-                    style={{margin: "0 0.5rem 0 auto", fill: "black", cursor: "pointer"}}
-                    onClick={ async () => {
-                      await api.deleteVideo({
-                        videoId: props.videoId,
-                      });
-                      props.fetchData()
-                      }}
+                    style={{
+                      margin: "0 0.5rem 0 auto",
+                      fill: "black",
+                      cursor: "pointer",
+                    }}
+                    onClick={handleLinkClickDelete}
                     xmlns="http://www.w3.org/2000/svg"
                     height="16"
                     width="14"
@@ -48,7 +61,7 @@ const VideoBox = (props) => {
           ) : (
             <>
               <img src="images/spinner.gif" alt="thumbnail" />
-              <div style={{padding: "0.5rem"}} className="video-details">
+              <div style={{ padding: "0.5rem" }} className="video-details">
                 <p style={{ textAlign: "center", fontWeight: "600" }}>
                   Processing..... <br /> It may take 10 to 15 minutes
                 </p>
@@ -58,6 +71,13 @@ const VideoBox = (props) => {
         </div>
       </Link>
       {showPopup && <Popup onClose={handleLinkClick} src={props.srcVideo} />}
+      {showDeletePopup && (
+        <DeletePopup
+          onClose={handleLinkClickDelete}
+          videoId={props.videoId}
+          fetchData={props.fetchData}
+        />
+      )}
     </div>
   );
 };

@@ -1,0 +1,87 @@
+.popup-delete {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(5rem - 4px);
+}
+
+.popup-content-delete {
+  background-color: white;
+  padding: 1.2rem 2.2rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-3 {
+  appearance: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin: 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3.yes {
+    background-color: #EE4B2B;
+}
+
+.button-3.no {
+    background-color: #2ea44f;
+}
+
+.button-3.no:hover {
+  background-color: #2c974b;
+}
+
+.button-3.yes:hover {
+    background-color: #D22B2B;
+  }
+
+  @media only screen and (max-width: 325px) {
+    .popup-content-delete {
+        padding: 0.9rem 1.7rem;
+    }
+
+    .button-3 {
+        padding: 4px 13px;
+    }
+  
+  }
