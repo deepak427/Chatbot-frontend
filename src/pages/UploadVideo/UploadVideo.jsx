@@ -21,17 +21,30 @@ const UploadVideo = () => {
     e.preventDefault();
 
     if (!title || !speech) {
-        alert("Enter title and speech");
-        return;
+      alert("Enter title and speech");
+      return;
+    }
+
+    const wordLimit = 70;
+    const words = speech.split(/\s+/);
+
+    const formattedspeech = words.reduce((result, word, index) => {
+      result += word + " ";
+      if ((index + 1) % wordLimit === 0) {
+        result += "\n\n";
       }
+      return result;
+    }, "");
 
     api.UploadVideo({
       title,
-      speech,
+      speech: formattedspeech,
     });
-    setTitle("")
-    setSpeech("")
-    alert("The Video will be updated on speech section in about 10 to 15 minutes.");
+    setTitle("");
+    setSpeech("");
+    alert(
+      "The Video will be updated on speech section in about 10 to 15 minutes."
+    );
   };
 
   const handleEnter = (e) => {
@@ -77,10 +90,14 @@ const UploadVideo = () => {
           </div>
           <div className="bottom-div">
             <input type="submit" value="Upload video" className="review-btn" />
-            <button type="button" onClick={() => {
+            <button
+              type="button"
+              onClick={() => {
                 localStorage.removeItem("Token");
-                navigate("/")
-            }} className="logout-btn">
+                navigate("/");
+              }}
+              className="logout-btn"
+            >
               Log Out
             </button>
           </div>
