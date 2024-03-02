@@ -3,6 +3,7 @@ import governorPrimeminister from "../../assets/governor-primeminister.jpg";
 import Cards from "../../components/Cards/Cards";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+import FooterMain from "../../components/Footer/FooterMain";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -30,6 +31,8 @@ const Home = () => {
         src="images/bot.gif"
         alt=""
       />
+
+      <FooterMain />
     </div>
   );
 };
